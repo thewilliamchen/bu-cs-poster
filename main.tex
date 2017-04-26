@@ -241,14 +241,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \small{\rmfamily{Thanks.}} 
 
-
-\vspace*{\fill}
-\begin{flushright}
-\vspace{1cm}
-\includegraphics[width=.1\linewidth]{bucompsci} \textsf{\large{~@BUCompSci}}
-\end{flushright}
-
 \end{block}
+
+
+
 
 
 %----------------------------------------------------------------------------------------
@@ -256,6 +252,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 \end{column} % End of the third column
 
 \end{columns} % End of all the columns in the poster
+
+%----------------------------------------------------------------------------------------
+%	LOGO - this will likely need some manual readjustment
+%----------------------------------------------------------------------------------------
+\vspace*{\fill}
+\begin{tikzpicture}{}[remember picture,overlay]
+\begin{scope}[transform canvas={xshift=-3cm, yshift=-14.5cm}]
+\node[anchor=south east] at (current page.south east) {\null\hfill\includegraphics[width=.05\linewidth]{bucompsci} \textsf{\large{~@BUCompSci}}};
+\end{scope}
+\end{tikzpicture}
 
 \end{frame} % End of the enclosing frame
 
