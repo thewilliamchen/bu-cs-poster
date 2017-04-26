@@ -28,10 +28,10 @@
 
 \usetheme{confposter} % Use the confposter theme supplied with this template
 
-\setbeamercolor{block title}{fg=ngreen,bg=white} % Colors of the block titles
+\setbeamercolor{block title}{fg=bured,bg=white} % Colors of the block titles
 \setbeamercolor{block body}{fg=black,bg=white} % Colors of the body of blocks
-\setbeamercolor{block alerted title}{fg=white,bg=dblue!70} % Colors of the highlighted block titles
-\setbeamercolor{block alerted body}{fg=black,bg=dblue!10} % Colors of the body of highlighted blocks
+\setbeamercolor{block alerted title}{fg=white,bg=bured!70} % Colors of the highlighted block titles
+\setbeamercolor{block alerted body}{fg=black,bg=bured!10} % Colors of the body of highlighted blocks
 % Many more colors are available for use in beamerthemeconfposter.sty
 
 %-----------------------------------------------------------
@@ -63,11 +63,11 @@
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 
-\title{Measuring Security of Closed DNS Resolvers} % Poster title
+\title{Lorem Ipsum} % Poster title
 
-\author{Sarah Scheffler, Sean Smith, Yossi Gilad, Sharon Goldberg} % Author(s) %TODO: ordering?
+\author{Person A, Person B, Person C} % Author(s) %TODO: ordering?
 
-\institute{\{sscheff, swsmith, yossigi\}@bu.edu, goldbe@cs.bu.edu} % Institution(s)
+\institute{\{persona, personb, personc\}@bu.edu} % Institution(s) or emails
 
 %----------------------------------------------------------------------------------------
 
@@ -88,67 +88,23 @@
 \begin{column}{\onecolwid} % The first column
 
 
-% PLANNING SECTION
-% Goals
-% Closed DNS resolvers and DNS checks made by email
-% Measurement design
-% Attacks from insecure DNS configurations
-
-%		%				%
-% Goals % Measurement	% attacks
-% %	% % % design		% from
-% closed%				% insecure
-%resolv+%	 picture	% DNS
-%		%				%
-
 %----------------------------------------------------------------------------------------
-%	OBJECTIVES
+%	SECTION 
 %----------------------------------------------------------------------------------------
 
-%\begin{alertblock}{Objectives}
+\begin{block}{A section}
 
-%Lorem ipsum dolor sit amet, consectetur, nunc tellus pulvinar tortor, commodo eleifend %risus arcu sed odio:
-%\begin{itemize}
-%\item Mollis dignissim, magna augue tincidunt dolor, interdum vestibulum urna
-%\item Sed aliquet luctus lectus, eget aliquet leo ullamcorper consequat. Vivamus eros sem, %iaculis ut euismod non, sollicitudin vel orci.
-%\item Nascetur ridiculus mus.  
-%\item Euismod non erat. Nam ultricies pellentesque nunc, ultrices volutpat nisl ultrices a.
-%\end{itemize}
-
-%\end{alertblock}
-
-%----------------------------------------------------------------------------------------
-%	GOALS
-%----------------------------------------------------------------------------------------
-
-\begin{block}{Goals}
-
-In response to the spread of cache poisoning attacks, many DNS resolvers have gone from being \emph{open} to \emph{closed} resolvers, meaning that they will only perform queries on behalf of hosts within a single organization or Internet Service Provider. As a result, measuring the security of the DNS infrastructure has been made more difficult. Closed resolvers will not respond to researcher queries to determine if they utilize security measures like port randomization or transaction id randomization. However, we can effectively turn a closed resolver into an open one by sending an email to a mail server (MTA) in the organization.  This causes the MTA to make a query on the external researchers' behalf, and we can log the security features of the DNS resolver using information gained by a nameserver and email server under our control. The goals of this experiment are
-\vspace{-10px}
-\begin{enumerate}
-\item ~to measure the security of closed DNS resolvers using Email
-\item ~to measure the relationship between MTAs and DNS resolvers that make queries on their behalf
-\item ~to measure what DNS queries are made as a result of sending an email under several different spam-prevention measures
-\end{enumerate}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \end{block}
 
-%------------------------------------------------
 %----------------------------------------------------------------------------------------
-%	EMAIL SPAM PREVENTION CAUSES DNS LOOKUPS
+%	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Email Spam Prevention and DNS}
+\begin{block}{Another Section}
 
-Mail servers cause several DNS queries to be made as anti-spam measures. This experiment measures the DNS queries caused by sending an email
-\begin{enumerate}
-\item ~by itself
-\item ~under several different Sender Policy Framework (SPF) configurations
-\item ~with DomainKeys Identified Mail (DKIM) and Domain Message Authentication Reporting \& Conformance (DMARC)
-\end{enumerate}
-
-%% Say something about SPF non-compliance?
-We have found instances where SPF records are checked such a in a way that allows us to craft an infinite chain of DNS lookups. Such an attack could be the injection vector for a Kaminsky DNS cache poisoning attack. We will determine how many systems are vulnerable to such an attack.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -160,10 +116,10 @@ We have found instances where SPF records are checked such a in a way that allow
 \begin{column}{\twocolwid} % Begin a column which is two columns wide (column 2)
 
 %----------------------------------------------------------------------------------------
-%	Measurement design wide title
+%	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Measurement Design}
+\begin{block}{Section 2}
 % This is just here for the title
 \end{block} 
 
@@ -172,36 +128,22 @@ We have found instances where SPF records are checked such a in a way that allow
 \begin{column}{\onecolwid}\vspace{-.6in} % The first column within column 2 (column 2.1)
 
 %----------------------------------------------------------------------------------------
-%	MEASUREMENT FLOW
+%	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Measurement Flow}
+\begin{block}{Section 3}
 
-\begin{figure}[experiment]
-  \centering
-  \includegraphics[width=\onecolwid]{experiment_flow}
-  \caption{The experiment queries MTAs found in port scan, then measures what kinds of DNS queries were made from what servers in response.}
-\end{figure}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \end{block}
 
 %----------------------------------------------------------------------------------------
-%	ANOTHER SECTION
+%	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{DoS Amplification via SPF}
+\begin{block}{Section 4}
 
-% We're doing an Internet wide scan with the purpose of exposing security vulnerabilities in the DNS architecture, stemming from the ability to turn a closed resolver into an open resolver. One such attack is an indirect DOS attack. 
-
-Sender Policy framework (SPF) is an anti-spam email feature where the receiving MTA checks the DNS {\tt TXT} records of the domain sending the email. The {\tt TXT} record indicates which IP addresses are allowed to send email. 
-
-One feature of SPF records allows you to specify {\tt include:anotherdomain.com} so that it recursively looks up another domain's SPF records. If this passes, the whole SPF record passes, but if it fails, it checks the next SPF record. The RFC states that the system must not lookup more than $10$ includes, but in practice, we've seen some mail servers check more than $10$ includes. Our attack is as follows:
-\begin{itemize}
-\item Send an email from {\tt us@ourdomain.com}
-\item MTA looks up our SPF record in which we have $N$ include records {\tt include:anotherdomain.com}
-\end{itemize}
-
-We can change the length of $N$, have the SPF records include themselves, or have many nested includes to ourselves. Using these techniques we can create many DNS queries that come from the MTA and not directly from the attacker, bypassing some DoS defenses.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 \end{block}
 
 
@@ -215,27 +157,9 @@ We can change the length of $N$, have the SPF records include themselves, or hav
 %	OVERVIEW
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Overview}
+\begin{block}{Section 5}
 
-We send emails to MTAs, encoding information about the MTA in our sending address.  We then measure what queries were made to our nameserver, and from what IP addresses.  This enables us to determine which DNS resolver makes queries for which MTA, and by looking at repeated queries, we determine whether the resolver has security features like transaction id randomization and port randomization.
-
-There are five phases to this experiment: %TODO: better intro here
-\begin{enumerate}
-\item ~Do an Internet-wide port scan on ports commonly used for SMTP (25, 465, 587, and 2525)
-\item ~For each IP address in the scan, send an email to a recipient served by that MTA with a sending address that encodes the IP address of the MTA
-\item ~The MTA will ask its DNS resolver to do some anti-spam checks on the given email address
-\item ~The resolver asks our nameserver about the email address we sent from
-\item ~Log all queries to our nameserver, they tell us:
-\vspace{0.3cm}
-\begin{itemize}
-\item The IP address of the DNS resolver makes queries on behalf of this MTA
-\vspace{0.2cm}
-\item What anti-spam protection this MTA had implemented
-\vspace{0.2cm}
-\item Whether the DNS resolver had implemented security measures against cache poisoning, like port randomization or transaction id randomization
-\end{itemize}
-\end{enumerate}
-Each of these steps must be done quickly to ensure that the public IP addresses of the MTAs and DNS resolvers do not change.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \end{block}
 
@@ -243,13 +167,9 @@ Each of these steps must be done quickly to ensure that the public IP addresses 
 %	GLOSSARY
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Glossary}
-\textbf{DNS} - Domain Name System
-
-\textbf{MTA} - Mail Transfer Agent (Email server)
-
-\textbf{SPF} - Sender Policy Framework (anti-spam measure implemented in some MTAs)
-\end{block}
+\begin{alertblock}{Glossary}
+\textbf{ACRONYM} - Acronyms Can Represent One New Year Method
+\end{alertblock}
 
 
 %----------------------------------------------------------------------------------------
@@ -291,19 +211,9 @@ Each of these steps must be done quickly to ensure that the public IP addresses 
 %	DNS CACHE POISONING THROUGH EMAIL
 %----------------------------------------------------------------------------------------
 
-\begin{block}{DNS Cache Poisoning via Email}
+\begin{block}{Section 6}
 
-\begin{figure}[cache_poisoning]
-  \centering
-  \includegraphics[width=\onecolwid]{Tim_Presentation}
-  \caption{Executing a DNS cache poisoning attack on a closed resolver via Email}
-\end{figure}
-
-%TODO: cite kaminsky?
-A Kaminsky attack "poisons" the cache of a DNS resolver by causing a query for an uncached subdomain and then sending a flood of packets to the resolver with fake responses claiming that that the IP address of the subdomain is a domain under the attacker's control.  Eventually, a benign response from the real domain will come as well, but it is discarded because the resolver already has the false answer in its cache.
-
-In response to this attack, several ISPs closed their DNS resolvers to reduce the ability of the attacker to cause queries from their resolver.  Two other responses are \emph{port randomization} and \emph{transaction id randomization}, in which outgoing queries have their ports and transaction ids randomized, respectively.  The resolver only accepts a response if the transaction id and port match the transaction id and port from the query.  This forces the attacker to send a much larger amount of traffic in order to force one of their fraudulent packets to become the accepted answer. %TODO: actual numbers
-One of our goals in this experiment is to determine the extent to which closed resolvers have implemented these randomization defenses.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \end{block}
 
@@ -313,13 +223,13 @@ One of our goals in this experiment is to determine the extent to which closed r
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
-%\begin{block}{References}
-%
-%\nocite{*} % Insert publications even if they are not cited in the poster
-%\small{\bibliographystyle{unsrt}
-%\bibliography{sample}\vspace{0.75in}}
-%
-%\end{block}
+\begin{block}{References}
+
+\nocite{*} % Insert publications even if they are not cited in the poster
+\small{\bibliographystyle{unsrt}
+\bibliography{sample}\vspace{0.75in}}
+
+\end{block}
 
 %----------------------------------------------------------------------------------------
 %	ACKNOWLEDGEMENTS
@@ -329,7 +239,7 @@ One of our goals in this experiment is to determine the extent to which closed r
 
 \begin{block}{Acknowledgements}
 
-\small{\rmfamily{We thank Jared Mauch for his invaluable help in designing this experiment to be effective and repeatable, and for providing us infrastructure needs.  We also thank Timothy Edgar for discussions on the legal implications of the attacks proposed.}} 
+\small{\rmfamily{Thanks.}} 
 
 
 \vspace*{\fill}
@@ -346,7 +256,7 @@ One of our goals in this experiment is to determine the extent to which closed r
 \end{column} % End of the third column
 
 \end{columns} % End of all the columns in the poster
-s
+
 \end{frame} % End of the enclosing frame
 
 \end{document}

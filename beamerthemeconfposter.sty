@@ -5,6 +5,7 @@
 % Created by the Computational Physics and Biophysics Group at Jacobs University
 % https://teamwork.jacobs-university.de:8443/confluence/display/CoPandBiG/LaTeX+Poster
 % Modified by Nathaniel Johnston (nathaniel@nathanieljohnston.com) in August 2009
+% Modified by Sarah Scheffler (sscheff@bu.edu) in April 2017
 % =============================================================================
 
 \ProvidesPackage{beamerthemeconfposter}
@@ -44,10 +45,9 @@
 \definecolor{dgreen} {RGB}{78,138,21}
 \definecolor{nblue}  {RGB}{28,130,185}
 \definecolor{jblue}  {RGB}{20,50,100}
-%\definecolor{bured}  {RGB}{250,43,45}
-\definecolor{bured} {RGB}{206,37,61}
+
 \definecolor{BrickRed}  {RGB}{206,37,61}
-%\definecolor{bublue} {RGB}{87,144,190}
+\definecolor{bured} {RGB}{206,37,61}
 \definecolor{bublue} {RGB}{34,34,34}
 
 %----------------------------------------------------------------------------
@@ -163,7 +163,7 @@
 \setbeamercolor{block body}{fg=black,bg=white}
 
 % set colors for alerted blocks (blocks with frame)
-\setbeamercolor{block alerted title}{fg=white,bg=bured}
+\setbeamercolor{block alerted title}{fg=white,bg=bured!70} 
 \setbeamercolor{block alerted body}{fg=black,bg=bured!10}
 
 % set the fonts
@@ -195,7 +195,7 @@
 \makeatother
 
 %==============================================================================
-% build the poster title
+% build the poster title, including logo
 %==============================================================================
 \setbeamertemplate{headline}{
  \leavevmode
