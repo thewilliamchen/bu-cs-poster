@@ -24,7 +24,7 @@
 
 \documentclass[final]{beamer}
 
-\usepackage[scale=1.24]{beamerposter} % Use the beamerposter package for laying out the poster
+\usepackage[scale=1.00]{beamerposter} % Use the beamerposter package for laying out the poster
 
 \usetheme{confposter} % Use the confposter theme supplied with this template
 
@@ -46,8 +46,8 @@
 \newlength{\onecolwid}
 \newlength{\twocolwid}
 \newlength{\threecolwid}
-\setlength{\paperwidth}{48in} % A0 width: 46.8in
-\setlength{\paperheight}{36in} % A0 height: 33.1in
+\setlength{\paperwidth}{40in} % A0 width: 46.8in
+\setlength{\paperheight}{30in} % A0 height: 33.1in
 \setlength{\sepwid}{0.024\paperwidth} % Separation width (white space) between columns
 \setlength{\onecolwid}{0.22\paperwidth} % Width of one column
 \setlength{\twocolwid}{0.464\paperwidth} % Width of two columns
@@ -56,18 +56,17 @@
 %-----------------------------------------------------------
 
 \usepackage{graphicx}  % Required for including images
-
 \usepackage{booktabs} % Top and bottom rules for tables
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 
-\title{Lorem Ipsum} % Poster title
+\title{Eftychis: Sentiment Analysis on Twitter Users} % Poster title
 
-\author{Person A, Person B, Person C} % Author(s) %TODO: ordering?
+\author{Anton M. Paquin, William J. Chen} % Author(s) %TODO: ordering?
 
-\institute{\{persona, personb, personc\}@bu.edu} % Institution(s) or emails
+\institute{\{paquin,chenwill\}@bu.edu} % Institution(s) or emails
 
 %----------------------------------------------------------------------------------------
 
@@ -92,9 +91,11 @@
 %	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{A section}
+\begin{block}{Powered by:}
+\includegraphics[width=1\linewidth]{Elasticsearch-Logo-Color-H.png} 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\includegraphics[width=0.8\linewidth]{Kibana-Logo-Color-H} 
+
 
 \end{block}
 
@@ -102,9 +103,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Another Section}
+\begin{block}{Data Acquisition}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\includegraphics[width=1\linewidth]{screenshot.png} 
+
+
+
+Using a Google Cloud Platform virtual server and the Twitter API, we were able to scrape a sample of recent tweets from the Twitter social network at an hourly interval. The API enabled us to scrape within a specified radius
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -119,7 +124,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Section 2}
+\begin{block}{Data Analysis}
 % This is just here for the title
 \end{block} 
 
@@ -131,7 +136,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Section 3}
+\begin{block}{Label Propagation}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -140,12 +145,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %----------------------------------------------------------------------------------------
 %	SECTION 
 %----------------------------------------------------------------------------------------
-
-\begin{block}{Section 4}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-\end{block}
-
 
 %----------------------------------------------------------------------------------------
 
@@ -157,7 +156,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %	OVERVIEW
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Section 5}
+\begin{block}{Clustering Analysis}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -211,7 +210,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %	DNS CACHE POISONING THROUGH EMAIL
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Section 6}
+\begin{block}{Conclusion}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -239,7 +238,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \begin{block}{Acknowledgements}
 
-\small{\rmfamily{Thanks.}} 
+\small{\rmfamily{Evimaria Terzi, Ph.D}} 
 
 \end{block}
 
@@ -250,6 +249,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %----------------------------------------------------------------------------------------
 
 \end{column} % End of the third column
+\begin{column}{\sepwid}\end{column} % Empty spacer column
 
 \end{columns} % End of all the columns in the poster
 
@@ -258,7 +258,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %----------------------------------------------------------------------------------------
 \vspace*{\fill}
 \begin{tikzpicture}{}[remember picture,overlay]
-\begin{scope}[transform canvas={xshift=-3cm, yshift=-14.5cm}]
+\begin{scope}[transform canvas={xshift=-3cm, yshift=-10.5cm}]
 \node[anchor=south east] at (current page.south east) {\null\hfill\includegraphics[width=.05\linewidth]{bucompsci} \textsf{\large{~@BUCompSci}}};
 \end{scope}
 \end{tikzpicture}
