@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  5 MAY 2017 04:10
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  5 MAY 2017 07:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1607,37 +1607,37 @@ Package biblatex Warning: Patching footnotes failed.
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 75.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 75.
-LaTeX Font Info:    ... okay on input line 75.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 75.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 75.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for EU1/lmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 78.
+LaTeX Font Info:    Try loading font information for T3+cmr on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
-LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    ... okay on input line 78.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1675,7 +1675,7 @@ LaTeX Font Info:    ... okay on input line 75.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box76
-Package hyperref Info: Link coloring OFF on input line 75.
+Package hyperref Info: Link coloring OFF on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1685,9 +1685,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count364
 )
-LaTeX Info: Redefining \ref on input line 75.
-LaTeX Info: Redefining \pageref on input line 75.
-LaTeX Info: Redefining \nameref on input line 75.
+LaTeX Info: Redefining \ref on input line 78.
+LaTeX Info: Redefining \pageref on input line 78.
+LaTeX Info: Redefining \nameref on input line 78.
 
 (./main.out) (./main.out)
 \@outlinefile=\write6
@@ -1718,10 +1718,10 @@ Dictionary: translator-numbers-dictionary, Language: English
 r-theorem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 75.
+LaTeX Info: Redefining \includegraphics on input line 78.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 75.
+LaTeX Info: Redefining \selectfont on input line 78.
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
@@ -1732,82 +1732,71 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' not found.
 
 No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 75.
-Package biblatex Info: Reference segment=0 on input line 75.
+Package biblatex Info: Reference section=0 on input line 78.
+Package biblatex Info: Reference segment=0 on input line 78.
 (./main.nav)
 File: Picture1.png Graphic file (type QTm)
  <use  "Picture1.png" >
-Overfull \hbox (56.9055pt too wide) in paragraph at lines 75--75
+Overfull \hbox (56.9055pt too wide) in paragraph at lines 78--78
 | []  
  []
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 75.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 78.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 75.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 78.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 75.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 78.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 75.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 78.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 75.
+(Font)              <14.4> on input line 78.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 75.
+(Font)              <10> on input line 78.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 75.
+(Font)              <7> on input line 78.
 File: eng-ece_sub_logo.png Graphic file (type QTm)
 
 <use  "eng-ece_sub_logo.png" >
-Overfull \hbox (448.98451pt too wide) detected at line 75
+Overfull \hbox (448.98451pt too wide) detected at line 78
  [] 
  []
 
 File: Elasticsearch-Logo-Color-V-sm.png Graphic file (type QTm)
 <use  "Elasticsearch-Logo-Color-V-sm.png" >
-File: screenshot.png Graphic file (type QTm)
- <use  "screenshot.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 291--291
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--291
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--291
-
- []
-
-LaTeX Font Info:    Calculating math sizes for size <29.86> on input line 291.
+File: dacq.png Graphic file (type QTm)
+ <use  "dacq.png" >
+LaTeX Font Info:    Calculating math sizes for size <29.86> on input line 297.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <29.86> on input line 291.
+(Font)              <29.86> on input line 297.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.9019> on input line 291.
+(Font)              <20.9019> on input line 297.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.93> on input line 291.
+(Font)              <14.93> on input line 297.
+File: happyMap.png Graphic file (type QTm)
 
-LaTeX Warning: Empty bibliography on input line 291.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--291
-
- []
-
+<use  "happyMap.png" >
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <24.88> on input line 297.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 297.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 297.
+File: timeseries.png Graphic file (type QTm)
+ <use  "timeseries.png" >
 Missing character: There is no [ in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -1834,9 +1823,12 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no ] in font nullfont!
 File: bucompsci.pdf Graphic file (type QTm)
-<use  "bucompsci.pdf" >
+ <use  "bucompsci.pdf" >
+Overfull \vbox (36.91917pt too high) detected at line 297
+ []
+
 File: Picture1.png Graphic file (type QTm)
- <use  "Picture1.png" >
+<use  "Picture1.png" >
 Overfull \hbox (56.9055pt too wide) has occurred while \output is active
 | []  
  []
@@ -1864,32 +1856,23 @@ Overfull \hbox (36.135pt too wide) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 293.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 293.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 293.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 293.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 299.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 299.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 293.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
  ) 
 Here is how much of TeX's memory you used:
- 41767 strings out of 493706
- 823065 string characters out of 6145769
- 1234738 words of memory out of 5000000
- 44430 multiletter control sequences out of 15000+600000
- 29892 words of font info for 69 fonts, out of 8000000 for 9000
+ 41803 strings out of 493706
+ 823712 string characters out of 6145769
+ 1233486 words of memory out of 5000000
+ 44463 multiletter control sequences out of 15000+600000
+ 41996 words of font info for 85 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 60i,18n,71p,10374b,1472s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,18n,71p,10374b,1449s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on main.pdf (1 page).

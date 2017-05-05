@@ -58,13 +58,16 @@
 %\setmainfont{Noto Sans}
 \usepackage{graphicx}  % Required for including images
 \usepackage{booktabs} % Top and bottom rules for tables
+
 \usepackage{biblatex}
-\addbibresource{2539190.bib}
+%\usepackage{cite}
+
+
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 
-\title{Eftychis: Sentiment Analysis on Twitter Users} % Poster title
+\title{Eftychis: Measuring Happiness on the Twitter Platform} % Poster title
 
 \author{Anton M. Paquin, William J. Chen} % Author(s) %TODO: ordering?
 
@@ -95,7 +98,7 @@
 
 \begin{block}{\textbf{Powered by:}}
 \begin{center}\includegraphics[
-width=0.7\linewidth]{Elasticsearch-Logo-Color-V-sm.png} \end{center}
+width=0.9\linewidth]{Elasticsearch-Logo-Color-V-sm.png} \end{center}
 
 %\includegraphics[width=0.5\linewidth]{Kibana-Logo-Color-H} 
 
@@ -108,21 +111,19 @@ width=0.7\linewidth]{Elasticsearch-Logo-Color-V-sm.png} \end{center}
 
 \begin{block}{Data Acquisition}
 
-\includegraphics[width=1\linewidth]{screenshot.png} 
-\newline
+\begin{center}\includegraphics[width=0.9\linewidth]{dacq} \end{center}
 
 
-Using a Google Cloud Platform virtual server and the Twitter API, we were able to scrape \textbf{23,585,039} tweets over the span of \textbf{10 days} from the Twitter social network. To obtain a geographically diverse set of tweets, we first list of \textbf{1054 coordinate pairs} that were equally spaced (\textbf{65km} apart) across the continental United States in a grid. We then made hourly API calls that requested 100 tweets located within 65km of each coordinate pair. \newline
+ Using a Google Cloud Platform virtual server and the Twitter API, we were able to scrape \textbf{23,585,039} tweets over the span of \textbf{10 days} from the Twitter social network. To obtain a geographically diverse set of tweets, we first list of \textbf{1054 coordinate pairs} that were equally spaced (\textbf{65km} apart) across the continental US in a grid. We then made hourly API calls that requested 100 tweets located within 65km of each coordinate pair. The collected data was then ingested into the Elasticsearch engine, which performed word tokenization and snowball filtering (word stemming). 
 
-
-The collected data was then ingested into the Elasticsearch engine, which performed word tokenization and snowball filtering (word stemming). \newline
-
-Elasticsearch also allowed us to identify the top most commonly observed words amongst all of the tweets we obtained. While the top three words were "https", "t.co", and "rt", indicating URLs and retweets, many of the other words were pronouns such as "you", "me", etc
+%Elasticsearch also allowed us to identify the top most commonly observed words amongst all of the tweets we obtained. 
 
 \end{block}
 
 %----------------------------------------------------------------------------------------
-
+\begin{alertblock}{Glossary}
+\textbf{Clamp} - Ground truth
+\end{alertblock}
 \end{column} % End of the first column
 
 \begin{column}{\sepwid}\end{column} % Empty spacer column
@@ -135,6 +136,12 @@ Elasticsearch also allowed us to identify the top most commonly observed words a
 
 \begin{block}{Data Analysis}
 % This is just here for the title
+\begin{figure}[h]
+
+
+\begin{center}\includegraphics[width=0.8\linewidth]{happyMap} \end{center}
+\caption{Example of a parametric plot ($\sin (x), \cos(x), x$)}
+\end{figure}
 \end{block} 
 
 \begin{columns}[t,totalwidth=\twocolwid] % Split up the two columns wide column
@@ -179,18 +186,17 @@ With the y' matrix, we are able to compute a "raw happiness score" for all of th
 %	OVERVIEW
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Clustering Analysis/Regression?}
+\begin{block}{Timeseries}
 
-
+\begin{center}\includegraphics[
+width=1\linewidth]{timeseries} \end{center}
 \end{block}
 
 %----------------------------------------------------------------------------------------
 %	GLOSSARY
 %----------------------------------------------------------------------------------------
 
-\begin{alertblock}{Glossary}
-\textbf{Clamp} - Ground truth
-\end{alertblock}
+
 
 
 %----------------------------------------------------------------------------------------
@@ -245,12 +251,13 @@ With the y' matrix, we are able to compute a "raw happiness score" for all of th
 
 \begin{block}{References}
 
-%{Yen-Jen Tai and Hung-Yu Kao. 2013. Automatic Domain-Specific Sentiment Lexicon Generation with Label Propagation. In Proceedings of International Conference on Information Integration and %Web-based Applications & Services (IIWAS '13). ACM, New York, NY, USA, , Pages 53 , 10 pages. DOI: http://dx.doi.org/10.1145/2539150.2539190}
 
-\nocite{*} % Insert publications even if they are not cited in the poster
-%\small{\bibliographystyle{plain}
-%\bibliography{2539190.bib}\vspace{0.75in}
-\printbibliography
+%\nocite{*} % Insert publications even if they are not cited in the poster
+%\small{\bibliographystyle{plain}}
+%\bibliography{2539190.bib}
+%\printbibliography
+
+
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -262,8 +269,7 @@ With the y' matrix, we are able to compute a "raw happiness score" for all of th
 \begin{block}{Acknowledgements}
 
 We would like to extend a warm thanks to Professor Evimaria Terzi for her lectures on data analysis techniques used in this project as part of CS506 - Computational Tools for Data Science.
-In addition, we 
-\newline
+
 
 \end{block}
 
@@ -283,7 +289,7 @@ In addition, we
 %----------------------------------------------------------------------------------------
 \vspace*{\fill}
 \begin{tikzpicture}{}[remember picture,overlay]
-\begin{scope}[transform canvas={xshift=-3cm, yshift=-3.5cm}]
+\begin{scope}[transform canvas={xshift=-3cm, yshift=1.5cm}]
 \node[anchor=south east] at (current page.south east) {\null\hfill\includegraphics[width=.05\linewidth]{bucompsci} \textsf{\large{~@BUCompSci}}};
 \end{scope}
 \end{tikzpicture}
