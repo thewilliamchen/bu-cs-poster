@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  4 MAY 2017 21:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  4 MAY 2017 23:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -49,11 +49,18 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: xetex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(/usr/local/texlive/2015/texmf-dist/tex/xelatex/xetex-def/xetex.def
-File: xetex.def 2015/03/25 v4.04 LaTeX color/graphics driver for XeTeX (TeX Liv
-e/RRM/JK)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count79
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
@@ -79,10 +86,10 @@ ode.tex
 \pgf@yc=\dimen113
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count79
-\c@pgf@countb=\count80
-\c@pgf@countc=\count81
-\c@pgf@countd=\count82
+\c@pgf@counta=\count80
+\c@pgf@countb=\count81
+\c@pgf@countc=\count82
+\c@pgf@countd=\count83
 \t@pgf@toka=\toks19
 \t@pgf@tokb=\toks20
 \t@pgf@tokc=\toks21
@@ -90,21 +97,15 @@ ode.tex
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-xetex.def
+Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
-f
-File: pgfsys-xetex.def 2013/07/16  (rcs-revision 1.9)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
-.def
-File: pgfsys-dvipdfmx.def 2013/08/28  (rcs-revision 1.12)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+ef
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
 
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
 df.def
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
-)
-\pgfsys@objnum=\count83
 )))
 (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
@@ -121,8 +122,9 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
@@ -451,7 +453,4 @@ Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
 Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
 Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
 Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
-Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
-Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
-Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
-Package 
+Package textcomp Info: Setting q

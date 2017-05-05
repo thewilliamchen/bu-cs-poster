@@ -28,6 +28,7 @@
 
 \usetheme{confposter} % Use the confposter theme supplied with this template
 
+
 \setbeamercolor{block title}{fg=bured,bg=white} % Colors of the block titles
 \setbeamercolor{block body}{fg=black,bg=white} % Colors of the body of blocks
 \setbeamercolor{block alerted title}{fg=white,bg=bured!70} % Colors of the highlighted block titles
@@ -41,7 +42,7 @@
 % onecolwid should therefore be (1-(# of columns+1)*sepwid)/# of columns e.g. (1-(4+1)*0.024)/4 = 0.22
 % Set twocolwid to be (2*onecolwid)+sepwid = 0.464
 % Set threecolwid to be (3*onecolwid)+2*sepwid = 0.708
-
+\usepackage{fontspec}
 \newlength{\sepwid}
 \newlength{\onecolwid}
 \newlength{\twocolwid}
@@ -54,10 +55,11 @@
 \setlength{\threecolwid}{0.708\paperwidth} % Width of three columns
 \setlength{\topmargin}{-0.5in} % Reduce the top margin size
 %-----------------------------------------------------------
-
+%\setmainfont{Noto Sans}
 \usepackage{graphicx}  % Required for including images
 \usepackage{booktabs} % Top and bottom rules for tables
-
+\usepackage{biblatex}
+\addbibresource{2539190.bib}
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
@@ -91,10 +93,11 @@
 %	SECTION 
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Powered by:}
-\includegraphics[width=1\linewidth]{Elasticsearch-Logo-Color-H.png} 
+\begin{block}{\textbf{Powered by:}}
+\begin{center}\includegraphics[
+width=0.7\linewidth]{Elasticsearch-Logo-Color-V-sm.png} \end{center}
 
-\includegraphics[width=0.8\linewidth]{Kibana-Logo-Color-H} 
+%\includegraphics[width=0.5\linewidth]{Kibana-Logo-Color-H} 
 
 
 \end{block}
@@ -106,13 +109,16 @@
 \begin{block}{Data Acquisition}
 
 \includegraphics[width=1\linewidth]{screenshot.png} 
+\newline
 
 
+Using a Google Cloud Platform virtual server and the Twitter API, we were able to scrape \textbf{23,585,039} tweets over the span of \textbf{10 days} from the Twitter social network. To obtain a geographically diverse set of tweets, we first list of \textbf{1054 coordinate pairs} that were equally spaced (\textbf{65km} apart) across the continental United States in a grid. We then made hourly API calls that requested 100 tweets located within 65km of each coordinate pair. \newline
 
-Using a Google Cloud Platform virtual server and the Twitter API, we were able to scrape \textbf{over twenty million} tweets over the span of \textbf{two weeks} from the Twitter social network. To obtain a geographically diverse set of tweets, we first list of \textbf{1054 coordinate pairs} that were equally spaced (65km apart) across the continental United States in a grid. We then made hourly API calls that requested 100 tweets located within 65km of each coordinate pair. \newline
 
+The collected data was then ingested into the Elasticsearch engine, which performed word tokenization and snowball filtering (word stemming). \newline
 
-The collected data would then be ingested into the Elasticsearch engine, which performs word tokenization and snowball filtering (word stemming).
+Elasticsearch also allowed us to identify the top most commonly observed words amongst all of the tweets we obtained. While the top three words were "https", "t.co", and "rt", indicating URLs and retweets, many of the other words were pronouns such as "you", "me", etc
+
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -141,9 +147,23 @@ The collected data would then be ingested into the Elasticsearch engine, which p
 
 \begin{block}{Label Propagation}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+To begin our sentiment analysis, we constructed an undirected graph with nodes representing each of the top 2000 words. Edges were created between each node with an edge weight indicating the frequency of tweets containing words A and B divided by the sum of tweets containing A and every other node. The result is a 2000-by-2000 matrix indicating probability that word i and j are related. Mathematically speaking, 
+we calculate 
+\begin{equation}
+T_{i,j} = \frac{w_{i,j}}{\sum_{k=0, i!=k}^{2000} w_{i,k}}
+\end{equation}
+for all nodes i,j. 
+
+From the 2000 most popular words, we created a list of "clamp words" containing positive words, and another for negative words.  We initialize a 2000-by-2 matrix y with each element set to (0,0), set positive clamps to (1,0), and set negative clamps to (0,1). Using y, T, and a constant $\alpha$ (= 0.3), we produce a 2000-by-2 matrix y' that relates non-clamp words with their clamped words via the equation:
+
+\begin{equation}
+\textbf{y'} = \alpha \textbf{Ty} + (1-\alpha)\textbf{y}
+\end{equation}
+
+With the y' matrix, we are able to compute a "raw happiness score" for all of the scraped tweets.
 
 \end{block}
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION 
@@ -159,9 +179,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %	OVERVIEW
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Clustering Analysis}
+\begin{block}{Clustering Analysis/Regression?}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \end{block}
 
@@ -170,7 +189,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %----------------------------------------------------------------------------------------
 
 \begin{alertblock}{Glossary}
-\textbf{ACRONYM} - Acronyms Can Represent One New Year Method
+\textbf{Clamp} - Ground truth
 \end{alertblock}
 
 
@@ -215,7 +234,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \begin{block}{Conclusion}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \end{block}
 
@@ -227,10 +245,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \begin{block}{References}
 
-\nocite{*} % Insert publications even if they are not cited in the poster
-\small{\bibliographystyle{unsrt}
-\bibliography{sample}\vspace{0.75in}}
+%{Yen-Jen Tai and Hung-Yu Kao. 2013. Automatic Domain-Specific Sentiment Lexicon Generation with Label Propagation. In Proceedings of International Conference on Information Integration and %Web-based Applications & Services (IIWAS '13). ACM, New York, NY, USA, , Pages 53 , 10 pages. DOI: http://dx.doi.org/10.1145/2539150.2539190}
 
+\nocite{*} % Insert publications even if they are not cited in the poster
+%\small{\bibliographystyle{plain}
+%\bibliography{2539190.bib}\vspace{0.75in}
+\printbibliography
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -241,7 +261,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 \begin{block}{Acknowledgements}
 
-\small{\rmfamily{Evimaria Terzi, Ph.D}} 
+We would like to extend a warm thanks to Professor Evimaria Terzi for her lectures on data analysis techniques used in this project as part of CS506 - Computational Tools for Data Science.
+In addition, we 
+\newline
 
 \end{block}
 
@@ -261,7 +283,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %----------------------------------------------------------------------------------------
 \vspace*{\fill}
 \begin{tikzpicture}{}[remember picture,overlay]
-\begin{scope}[transform canvas={xshift=-3cm, yshift=-5.5cm}]
+\begin{scope}[transform canvas={xshift=-3cm, yshift=-3.5cm}]
 \node[anchor=south east] at (current page.south east) {\null\hfill\includegraphics[width=.05\linewidth]{bucompsci} \textsf{\large{~@BUCompSci}}};
 \end{scope}
 \end{tikzpicture}
