@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  5 MAY 2017 07:22
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015) (preloaded format=xelatex 2015.5.24)  5 MAY 2017 09:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1775,59 +1775,35 @@ Overfull \hbox (448.98451pt too wide) detected at line 78
  [] 
  []
 
+File: google-cloud-platform-logo-2.png Graphic file (type QTm)
+<use  "google-cloud-platform-logo-2.png" >
 File: Elasticsearch-Logo-Color-V-sm.png Graphic file (type QTm)
+
 <use  "Elasticsearch-Logo-Color-V-sm.png" >
 File: dacq.png Graphic file (type QTm)
  <use  "dacq.png" >
-LaTeX Font Info:    Calculating math sizes for size <29.86> on input line 297.
+LaTeX Font Info:    Calculating math sizes for size <29.86> on input line 380.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <29.86> on input line 297.
+(Font)              <29.86> on input line 380.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.9019> on input line 297.
+(Font)              <20.9019> on input line 380.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.93> on input line 297.
+(Font)              <14.93> on input line 380.
 File: happyMap.png Graphic file (type QTm)
 
 <use  "happyMap.png" >
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 297.
+(Font)              <24.88> on input line 380.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 297.
+(Font)              <20.74> on input line 380.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 297.
+(Font)              <17.28> on input line 380.
+File: florida.png Graphic file (type QTm)
+ <use  "florida.png" >
 File: timeseries.png Graphic file (type QTm)
  <use  "timeseries.png" >
-Missing character: There is no [ in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no v in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no ] in font nullfont!
-File: bucompsci.pdf Graphic file (type QTm)
- <use  "bucompsci.pdf" >
-Overfull \vbox (36.91917pt too high) detected at line 297
- []
-
 File: Picture1.png Graphic file (type QTm)
+
 <use  "Picture1.png" >
 Overfull \hbox (56.9055pt too wide) has occurred while \output is active
 | []  
@@ -1856,22 +1832,22 @@ Overfull \hbox (36.135pt too wide) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 382.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 382.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 299.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 299.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 382.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 382.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 299.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 382.
  ) 
 Here is how much of TeX's memory you used:
- 41803 strings out of 493706
- 823712 string characters out of 6145769
- 1233486 words of memory out of 5000000
- 44463 multiletter control sequences out of 15000+600000
- 41996 words of font info for 85 fonts, out of 8000000 for 9000
+ 41789 strings out of 493706
+ 823316 string characters out of 6145769
+ 1247486 words of memory out of 5000000
+ 44447 multiletter control sequences out of 15000+600000
+ 42012 words of font info for 87 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  60i,18n,71p,10374b,1449s stack positions out of 5000i,500n,10000p,200000b,80000s
 

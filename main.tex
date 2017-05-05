@@ -98,6 +98,8 @@
 
 \begin{block}{\textbf{Powered by:}}
 \begin{center}\includegraphics[
+width=0.9\linewidth]{google-cloud-platform-logo-2} \end{center}
+\begin{center}\includegraphics[
 width=0.9\linewidth]{Elasticsearch-Logo-Color-V-sm.png} \end{center}
 
 %\includegraphics[width=0.5\linewidth]{Kibana-Logo-Color-H} 
@@ -110,10 +112,11 @@ width=0.9\linewidth]{Elasticsearch-Logo-Color-V-sm.png} \end{center}
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Data Acquisition}
+\begin{figure}[h]
 
 \begin{center}\includegraphics[width=0.9\linewidth]{dacq} \end{center}
-
-
+\caption{Scraper Acquisition Rate, bin size = 3 hours}
+\end{figure}
  Using a Google Cloud Platform virtual server and the Twitter API, we were able to scrape \textbf{23,585,039} tweets over the span of \textbf{10 days} from the Twitter social network. To obtain a geographically diverse set of tweets, we first list of \textbf{1054 coordinate pairs} that were equally spaced (\textbf{65km} apart) across the continental US in a grid. We then made hourly API calls that requested 100 tweets located within 65km of each coordinate pair. The collected data was then ingested into the Elasticsearch engine, which performed word tokenization and snowball filtering (word stemming). 
 
 %Elasticsearch also allowed us to identify the top most commonly observed words amongst all of the tweets we obtained. 
@@ -139,8 +142,8 @@ width=0.9\linewidth]{Elasticsearch-Logo-Color-V-sm.png} \end{center}
 \begin{figure}[h]
 
 
-\begin{center}\includegraphics[width=0.8\linewidth]{happyMap} \end{center}
-\caption{Example of a parametric plot ($\sin (x), \cos(x), x$)}
+\begin{center}\includegraphics[width=1.0\linewidth]{happyMap} \end{center}
+\caption{Happiness ranking amongst location nodes. Darker red = more happy}
 \end{figure}
 \end{block} 
 
@@ -153,7 +156,7 @@ width=0.9\linewidth]{Elasticsearch-Logo-Color-V-sm.png} \end{center}
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Label Propagation}
-
+\small{
 To begin our sentiment analysis, we constructed an undirected graph with nodes representing each of the top 2000 words. Edges were created between each node with an edge weight indicating the frequency of tweets containing words A and B divided by the sum of tweets containing A and every other node. The result is a 2000-by-2000 matrix indicating probability that word i and j are related. Mathematically speaking, 
 we calculate 
 \begin{equation}
@@ -168,7 +171,7 @@ From the 2000 most popular words, we created a list of "clamp words" containing 
 \end{equation}
 
 With the y' matrix, we are able to compute a "raw happiness score" for all of the scraped tweets.
-
+}
 \end{block}
 
 
@@ -186,15 +189,31 @@ With the y' matrix, we are able to compute a "raw happiness score" for all of th
 %	OVERVIEW
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Timeseries}
 
+
+\begin{block}{Linear Regression}
+\begin{figure}[h]
 \begin{center}\includegraphics[
-width=1\linewidth]{timeseries} \end{center}
+width=1\linewidth]{florida} \end{center}
+\caption{Happiness Rank and Distance from Florida}
+\end{figure}
+
+
+
+\begin{center}
+
+slope: 4.20157469466e-05 \\
+
+intercept: 440.693646678 \\
+
+r value: 0.114768473686 \\
+
+p value: 0.000189854300511 \\
+
+std err: 1.12178311817e-05 \\
+\end{center}
 \end{block}
 
-%----------------------------------------------------------------------------------------
-%	GLOSSARY
-%----------------------------------------------------------------------------------------
 
 
 
@@ -237,8 +256,76 @@ width=1\linewidth]{timeseries} \end{center}
 %----------------------------------------------------------------------------------------
 %	DNS CACHE POISONING THROUGH EMAIL
 %----------------------------------------------------------------------------------------
+\begin{block}{Timeseries}
+\begin{figure}[h]
+\begin{center}\includegraphics[
+width=1\linewidth]{timeseries} \end{center}
+\caption{Average Happiness Score over 7 days, bin = 1 hour}
+\end{figure}
+\end{block}
+\vspace*{-2cm}\begin{block}{Selected Words}
 
-\begin{block}{Conclusion}
+\begin{figure}[h]
+\begin{center}
+\scalebox{0.7}{
+  \begin{tabular}{ | l | c | r |}
+    \hline
+%    1 & 2 & 3 \\ \hline
+%    4 & 5 & 6 \\ \hline
+%    7 & 8 & 9 \\
+
+
+korea & 13828 & -0.13430681792918284 \\ \hline
+trump & 145406 & 0.03434664466312476 \\ \hline
+putin & 4894 & 0.0028080959853072603 \\ \hline
+emoji & 4771 & 0.376287210435987 \\ \hline
+data & 11407 & 0.21288790612221517 \\ \hline
+compsci & 11 & 0.5963701795447957 \\ \hline
+java & 625 & -0.15378272525072098 \\ \hline
+twitter & 67944 & 0.13491412925665835 \\ \hline
+anton & 257 & 0.1737167865530758 \\ \hline
+will & 6518 & 0.05781411350105757 \\ \hline
+chemic & 2077 & -0.004170945664503659 \\ \hline
+fuck & 191900 & -0.1313666116290052 \\ \hline
+mario & 4620 & 0.2885205025985437 \\ \hline
+convers & 14512 & 0.3058652571783051 \\
+
+    \hline
+    
+  \end{tabular}}
+  \caption{Words, Frequency, Happiness Score}
+\end{center}
+
+\end{figure}
+%----
+\begin{figure}[h]
+\begin{center}
+\scalebox{0.7}{
+  \begin{tabular}{ | l | c | r | }
+    \hline
+Happiness Score &  Word \\ \hline
+0.76879883043755948 & 'dog' \\ \hline
+0.76755679586472614 & 'weather' \\ \hline
+0.76078575172677931 & 'sure'  \\ \hline
+0.76034724795438691 & 'presid'   \\ \hline
+0.7483814115522347 & 'dope'  \\ \hline
+0.74837395464244649 & 'feel' \\ \hline
+0.74769187912219326 & 'look' \\ \hline
+0.74724184565477569 & 'smell'  \\ \hline
+.................................... & ... \\ \hline
+0.60439786628291425 & 'n***a'  \\ \hline
+0.60771799519059977 & 'price' \\ \hline
+0.6100769239001258 & 'death' \\ \hline
+0.61080646060234023 & 'realdonaldtrump' \\
+
+    \hline
+    
+  \end{tabular}}
+
+\end{center}
+  \caption{Selected Happiest/Unhappiest Words}
+
+\end{figure}
 
 
 \end{block}
@@ -250,13 +337,9 @@ width=1\linewidth]{timeseries} \end{center}
 %----------------------------------------------------------------------------------------
 
 \begin{block}{References}
+\small{Yen--Jen Tai, Hung--Yu Kao, Automatic Domain---Specific Sentiment Lexicon Generation with Label Propagation, Proceedings of International Conference on Information Integration and Web--based Applications \& Services, December 02--04, 2013, Vienna, Austria
 
-
-%\nocite{*} % Insert publications even if they are not cited in the poster
-%\small{\bibliographystyle{plain}}
-%\bibliography{2539190.bib}
-%\printbibliography
-
+}
 
 \end{block}
 
@@ -266,12 +349,12 @@ width=1\linewidth]{timeseries} \end{center}
 
 \setbeamercolor{block title}{fg=red,bg=white} % Change the block title color
 
-\begin{block}{Acknowledgements}
+%\begin{block}{Acknowledgements}
 
-We would like to extend a warm thanks to Professor Evimaria Terzi for her lectures on data analysis techniques used in this project as part of CS506 - Computational Tools for Data Science.
+%We would like to extend a warm thanks to Professor Evimaria Terzi for her lectures on data analysis techniques used in this project as part of CS506 - Computational Tools for Data Science.
 
 
-\end{block}
+%\end{block}
 
 
 
@@ -288,11 +371,11 @@ We would like to extend a warm thanks to Professor Evimaria Terzi for her lectur
 %	LOGO - this will likely need some manual readjustment
 %----------------------------------------------------------------------------------------
 \vspace*{\fill}
-\begin{tikzpicture}{}[remember picture,overlay]
-\begin{scope}[transform canvas={xshift=-3cm, yshift=1.5cm}]
-\node[anchor=south east] at (current page.south east) {\null\hfill\includegraphics[width=.05\linewidth]{bucompsci} \textsf{\large{~@BUCompSci}}};
-\end{scope}
-\end{tikzpicture}
+%\begin{tikzpicture}{}[remember picture,overlay]
+%\begin{scope}[transform canvas={xshift=-3cm, yshift=1.5cm}]
+%\node[anchor=south east] at (current page.south east) {\null\hfill\includegraphics[width=.05\linewidth]{bucompsci} \textsf{\large{~@BUCompSci}}};
+%\end{scope}
+%\end{tikzpicture}
 
 \end{frame} % End of the enclosing frame
 
