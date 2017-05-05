@@ -109,7 +109,10 @@
 
 
 
-Using a Google Cloud Platform virtual server and the Twitter API, we were able to scrape a sample of recent tweets from the Twitter social network at an hourly interval. The API enabled us to scrape within a specified radius
+Using a Google Cloud Platform virtual server and the Twitter API, we were able to scrape \textbf{over twenty million} tweets over the span of \textbf{two weeks} from the Twitter social network. To obtain a geographically diverse set of tweets, we first list of \textbf{1054 coordinate pairs} that were equally spaced (65km apart) across the continental United States in a grid. We then made hourly API calls that requested 100 tweets located within 65km of each coordinate pair. \newline
+
+
+The collected data would then be ingested into the Elasticsearch engine, which performs word tokenization and snowball filtering (word stemming).
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -258,7 +261,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 %----------------------------------------------------------------------------------------
 \vspace*{\fill}
 \begin{tikzpicture}{}[remember picture,overlay]
-\begin{scope}[transform canvas={xshift=-3cm, yshift=-10.5cm}]
+\begin{scope}[transform canvas={xshift=-3cm, yshift=-5.5cm}]
 \node[anchor=south east] at (current page.south east) {\null\hfill\includegraphics[width=.05\linewidth]{bucompsci} \textsf{\large{~@BUCompSci}}};
 \end{scope}
 \end{tikzpicture}
